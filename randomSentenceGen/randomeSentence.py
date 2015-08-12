@@ -25,7 +25,9 @@ def sentence_maker(Answer):
         print pick(a_nouns).title(), pick(a_verbs), pick(b_nouns).lower(), \
          pick(b_verbs), pick(infinitives).lower() + "!"
         print ("Would you like another sentence?") 
-    if Answer == "no":
+    if Answer != "no":
         print ("No-well then, what do you want to do then?")
 
+
 sentence_maker(userAnswer)
+
