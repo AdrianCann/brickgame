@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<canvas id="myCanvas" width="480" height="320"></canvas>
+<canvas id="myCanvas" width="880" height="620"></canvas>
 
 <script>
     var canvas = document.getElementById("myCanvas");
@@ -19,14 +19,14 @@
     var x = canvas.width/2; 
     var y = canvas.height-30;
     var dx = -2;
-    var dy = -2;
+    var dy = -6;
     var rightPressed = false;
     var leftPressed = false;
     var paddleHeight = 10;
     var paddleWidth = 75;
     var paddleX = (canvas.width-paddleWidth)/2;
-    var brickRowCount = 3;
-    var brickColumnCount = 5;
+    var brickRowCount = 10;
+    var brickColumnCount = 4;
     var brickWidth = 75;
     var brickHeight = 20;
     var brickPadding = 10;
@@ -34,6 +34,7 @@
     var brickOffsetLeft = 30;
     var score = 0 ;
     var lives = 3 ;
+    
 
     var bricks = [];
     for(c=0; c<brickColumnCount; c++) {
@@ -46,7 +47,7 @@
         function drawPaddle() {
             ctx.beginPath();
             ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
-            ctx.fillStyle = "#0095DD";
+            ctx.fillStyle = "#FFCC99";
             ctx.fill();
             ctx.closePath();
         }
@@ -74,7 +75,7 @@
         function drawBall() {
             ctx.beginPath();
             ctx.arc(x, y, ballRadius, 0, Math.PI*2);
-            ctx.fillStyle = "#0095DD";
+            ctx.fillStyle = "#8533D6";
             ctx.fill();
             ctx.closePath();
         }
@@ -173,7 +174,7 @@
 
         function drawLives() {
             ctx.font = "16px Arial";
-            ctx.fillStyle = "#0095DD";
+            ctx.fillStyle = "#339933";
             ctx.fillText("Lives: "+lives, canvas.width-65, 20);
         }
 
