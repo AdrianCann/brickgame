@@ -1,1 +1,1 @@
-web: python brickgame/brickgame.py
+web: gunicorn brickgame:app
