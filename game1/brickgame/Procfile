@@ -1,1 +1,1 @@
-web: gunicorn brickgame:app --log-file=-
+web: gunicorn brickgame:app 
