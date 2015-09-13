@@ -1,1 +1,1 @@
-gunicorn -b 0.0.0.0:$PORT brickgame:app
+web: gunicorn brickgame:app --log-file=-
