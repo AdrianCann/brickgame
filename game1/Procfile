@@ -1,2 +1,1 @@
-web: gunicorn brickgame:app
-heroku ps:scale web=1
+web: python game1/brickgame.py
