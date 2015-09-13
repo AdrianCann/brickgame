@@ -1,1 +1,2 @@
 web: gunicorn brickgame:app
+heroku ps:scale web=1
