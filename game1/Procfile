@@ -1,1 +1,1 @@
-web: python game1/brickgame.py
+gunicorn -b 0.0.0.0:$PORT brickgame:app
